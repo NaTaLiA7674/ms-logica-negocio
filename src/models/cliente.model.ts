@@ -1,4 +1,4 @@
-import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Entity, hasMany, model, property} from '@loopback/repository';
 import {Venta} from './venta.model';
 
 @model()
@@ -14,7 +14,7 @@ export class Cliente extends Entity {
     type: 'string',
     required: true,
   })
-  primerNombre: string;
+  PrimerNombre: string;
 
   @property({
     type: 'string',
@@ -29,9 +29,8 @@ export class Cliente extends Entity {
 
   @property({
     type: 'string',
-    required: true,
   })
-  segundoApellido: string;
+  segundoApellido?: string;
 
   @property({
     type: 'string',
